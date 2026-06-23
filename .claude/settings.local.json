@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -command \"Get-Content 'index-C79c2I9L.js' -Raw\")",
+      "Bash(powershell -command ' *)",
+      "Bash(npm install *)",
+      "PowerShell(Get-Command node, npm -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" -ErrorAction SilentlyContinue; Get-ChildItem \"$env:APPDATA\\\\npm\\\\npm.cmd\" -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\Program Files\\\\nodejs\" -ErrorAction SilentlyContinue | Select-Object -First 5)",
+      "Bash(find /c/Users/Marcus -name \"node.exe\" 2>/dev/null | head -3 *)",
+      "Bash(gh api *)"
+    ]
+  }
+}
