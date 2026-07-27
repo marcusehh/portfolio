@@ -39,12 +39,13 @@ function MarkdownPost({ url }: { url: string }) {
 }
 
 export default function Posts() {
-  const { openPost, setOpenPost } = useAppContext()
+  const { openPost, setOpenPost, performanceMode } = useAppContext()
   const [hovered, setHovered] = useState<number | null>(null)
   const [displayed, setDisplayed] = useState<number | null>(null)
   const [charCount, setCharCount] = useState(0)
 
   useEffect(() => {
+    if (performanceMode) return
     const desc = displayed !== null ? POSTS[displayed].desc : undefined
     if (displayed === hovered) {
       if (desc && charCount < desc.length) {
@@ -58,7 +59,7 @@ export default function Posts() {
       }
       setDisplayed(hovered)
     }
-  }, [hovered, displayed, charCount])
+  }, [hovered, displayed, charCount, performanceMode])
 
   if (openPost !== null) {
     const post = POSTS[openPost]
@@ -87,8 +88,8 @@ export default function Posts() {
           >
             <div className="post-item__content">
               <span className="post-item__title">{post.title}</span>
-              {displayed === i && post.desc && charCount > 0 && (
-                <div className="post-item__desc">{post.desc.slice(0, charCount)}</div>
+              {(performanceMode || (hovered === i && charCount > 0)) && post.desc && (
+                <div className="post-item__desc">{performanceMode ? post.desc : post.desc.slice(0, charCount)}</div>
               )}
             </div>
             <div className="post-item__meta">

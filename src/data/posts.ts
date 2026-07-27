@@ -21,6 +21,13 @@ export const POSTS: Post[] = [
     kind: 'markdown',
     markdown: '/posts_projects/fall_of_pcs.md',
   },
+  {
+    title: 'Are we ready for the implementation of AI?',
+    date: '2026-07',
+    desc: 'An opinion-piece arguing that AI may be overhyped and overvalued in the short term despite its long-term potential.',
+    kind: 'markdown',
+    markdown: '/posts_projects/Are_we_ready_for_the_implementation_of_AI.md',
+  },
 ]
 
 POSTS.sort((a, b) => b.date.localeCompare(a.date))

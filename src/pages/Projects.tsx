@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react'
 import { PROJECTS } from '../data/projects'
+import { useAppContext } from '../AppContext'
 
 const TYPE_MS = 15
 const ERASE_MS = 5
 
 export default function Projects() {
+  const { performanceMode } = useAppContext()
   const [hovered, setHovered] = useState<number | null>(null)
   const [displayed, setDisplayed] = useState<number | null>(null)
   const [charCount, setCharCount] = useState(0)
 
   useEffect(() => {
+    if (performanceMode) return
     const desc = displayed !== null ? PROJECTS[displayed].desc : undefined
     if (displayed === hovered) {
       if (desc && charCount < desc.length) {
@@ -23,7 +26,7 @@ export default function Projects() {
       }
       setDisplayed(hovered)
     }
-  }, [hovered, displayed, charCount])
+  }, [hovered, displayed, charCount, performanceMode])
 
   return (
     <>
@@ -45,10 +48,8 @@ export default function Projects() {
             )}
             <div className="post-item__content">
               <span className="post-item__title">{project.title}</span>
-              {displayed === i && project.desc && charCount > 0 && (
-                <div className="post-item__desc">
-                  {project.desc.slice(0, charCount)}
-                </div>
+              {(performanceMode || (hovered === i && charCount > 0)) && project.desc && (
+                <div className="post-item__desc">{performanceMode ? project.desc : project.desc.slice(0, charCount)}</div>
               )}
             </div>
             <div className="post-item__meta">

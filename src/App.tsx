@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Posts from './pages/Posts'
 import Projects from './pages/Projects'
+import GlobalCursor from './components/GlobalCursor'
 
 const PAGES: PageId[] = ['home', 'about', 'posts', 'projects']
 
@@ -114,6 +115,11 @@ export default function App() {
   const [flyBtn, setFlyBtn] = useState<FlyBtn>({ label: 'home', position: 'header' })
   const [openPost, setOpenPost] = useState<number | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [cursorEnabled, setCursorEnabled] = useState(() => window.matchMedia('(hover: hover)').matches)
+
+  useEffect(() => {
+    document.body.classList.toggle('cursor-custom', cursorEnabled)
+  }, [cursorEnabled])
   const timers = useRef<number[]>([])
 
   useEffect(() => () => timers.current.forEach(clearTimeout), [])
@@ -175,7 +181,8 @@ export default function App() {
     : undefined
 
   return (
-    <AppContext.Provider value={{ openPost, setOpenPost, goto }}>
+    <AppContext.Provider value={{ openPost, setOpenPost, goto, performanceMode: !cursorEnabled }}>
+      {cursorEnabled && window.matchMedia('(hover: hover)').matches && <GlobalCursor circleEnabled={activePage !== 'posts' || openPost === null} />}
       <div className="app">
         <aside className="sidebar">
           <div
@@ -243,6 +250,21 @@ export default function App() {
 
           <Footer />
         </main>
+
+        <aside className="right-sidebar">
+          <div className="right-sidebar__top">
+            <button
+              type="button"
+              className={`cursor-toggle${!cursorEnabled ? ' cursor-toggle--on' : ''}`}
+              onClick={() => setCursorEnabled((v) => !v)}
+              aria-label="Toggle performance mode"
+              aria-pressed={!cursorEnabled}
+            >
+              <span className="cursor-toggle__thumb" />
+            </button>
+            <span className="cursor-toggle__mode">Performance Mode</span>
+          </div>
+        </aside>
 
         {flyBtn && (
           <div

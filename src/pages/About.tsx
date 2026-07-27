@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { CONTACT_LINKS } from '../data/contact'
 import { BOOKS, type Book } from '../data/books'
+import { useAppContext } from '../AppContext'
 
 function BookCard({ book }: { book: Book }) {
   const [cover, setCover] = useState<string | null>(null)
@@ -33,10 +34,11 @@ const TYPE_MS = 15
 const ERASE_MS = 5
 const READING_DESC = 'Books I have read.'
 
-function useTypewriter(active: boolean, text: string) {
+function useTypewriter(active: boolean, text: string, skip: boolean) {
   const [charCount, setCharCount] = useState(0)
 
   useEffect(() => {
+    if (skip) return
     if (active) {
       if (charCount < text.length) {
         const t = window.setTimeout(() => setCharCount((c) => c + 1), TYPE_MS)
@@ -48,16 +50,18 @@ function useTypewriter(active: boolean, text: string) {
         return () => clearTimeout(t)
       }
     }
-  }, [active, charCount, text])
+  }, [active, charCount, text, skip])
 
+  if (skip) return active ? text : ''
   return text.slice(0, charCount)
 }
 
 export default function About() {
+  const { performanceMode } = useAppContext()
   const [open, setOpen] = useState(false)
   const [hoveredReading, setHoveredReading] = useState(false)
 
-  const readingDesc = useTypewriter(hoveredReading, READING_DESC)
+  const readingDesc = useTypewriter(hoveredReading, READING_DESC, performanceMode)
 
   if (open) {
     return (
@@ -97,8 +101,8 @@ export default function About() {
           >
             <div className="post-item__content">
               <span className="post-item__title">Reading List</span>
-              {readingDesc && (
-                <div className="post-item__desc">{readingDesc}</div>
+              {(performanceMode || readingDesc) && (
+                <div className="post-item__desc">{performanceMode ? READING_DESC : readingDesc}</div>
               )}
             </div>
             <div className="post-item__meta">
