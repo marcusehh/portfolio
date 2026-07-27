@@ -32,7 +32,7 @@ function BookCard({ book }: { book: Book }) {
 
 const TYPE_MS = 15
 const ERASE_MS = 5
-const READING_DESC = 'Books I have read.'
+const READING_DESC = 'Books I like.'
 
 function useTypewriter(active: boolean, text: string, skip: boolean) {
   const [charCount, setCharCount] = useState(0)
@@ -86,7 +86,7 @@ export default function About() {
         <h2>Marcus EJ Hawkins</h2>
         <p>
           I am an incoming undergraduate at <b>University College London (UCL)</b>{' '}
-          and I will be studying <b>BSc Social Sciences with Data Science</b>.
+          and I will be studying <b>BSc Social Sciences & Data Science</b>.
         </p>
         <p>
           I am interested in markets and tech and I enjoy game-development,

@@ -28,6 +28,13 @@ export const PROJECTS: Project[] = [
     desc: 'A more advanced version of the "Auto-DCF program".',
     image: '/posts_projects/projects_pictures/Dynamic_Pitch-Deck.png',
   },
+  {
+    title: 'Kingstone Investments Website',
+    date: '2026-03',
+    url: 'https://kingstoneinvestments.co.uk/',
+    desc: 'The website I have built for the investment fund I co-founded.',
+    image: '/posts_projects/projects_pictures/KIBanner.png',
+  },
 ]
 
 PROJECTS.sort((a, b) => b.date.localeCompare(a.date))
