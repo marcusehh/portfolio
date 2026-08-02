@@ -28,6 +28,13 @@ export const POSTS: Post[] = [
     kind: 'markdown',
     markdown: '/posts_projects/Are_we_ready_for_the_implementation_of_AI.md',
   },
+  {
+    title: 'Is sovereign AI possible?',
+    date: '2026-06',
+    desc: 'An article that answers what sovereign AI is and whether it is possible?',
+    kind: 'markdown',
+    markdown: '/posts_projects/Are_we_ready_for_the_implementation_of_AI.md',
+  },
 ]
 
 POSTS.sort((a, b) => b.date.localeCompare(a.date))

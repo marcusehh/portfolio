@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
     title: 'Kingstone Investments Website',
     date: '2026-03',
     url: 'https://kingstoneinvestments.co.uk/',
-    desc: 'The website I have built for the investment fund I co-founded.',
+    desc: 'The website I have built for the investment fund/club I co-founded.',
     image: '/posts_projects/projects_pictures/KIBanner.png',
   },
 ]
