@@ -31,9 +31,9 @@ export const POSTS: Post[] = [
   {
     title: 'Is sovereign AI possible?',
     date: '2026-06',
-    desc: 'An article that answers what sovereign AI is and whether it is possible?',
+    desc: 'An article that answers what sovereign AI is and whether it is truly possible? (Updated August 2026)',
     kind: 'markdown',
-    markdown: '/posts_projects/Are_we_ready_for_the_implementation_of_AI.md',
+    markdown: '/posts_projects/Sov_AI.md',
   },
 ]
 
