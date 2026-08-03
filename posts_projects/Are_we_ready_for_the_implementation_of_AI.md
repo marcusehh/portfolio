@@ -14,8 +14,8 @@ The Economist. (2026). Should you be afraid of Elon Musk?
 
 London School of Economics. (2025). _AI and the Generational Divide at Work._
 
-Gallup. (2026). Gen Z's AI Adoption Steady, but Skepticism Climbs. [https://news.gallup.com/poll/708224/gen-adoption-steady-skepticism-climbs.aspx](https://news.gallup.com/poll/708224/gen-adoption-steady-skepticism-climbs.aspx)
+Gallup. (2026). Gen Z's AI Adoption Steady, but Skepticism Climbs. [https://news.gallup.com/poll/708224/gen-adoption-steady-skepticism-climbs.aspx]
 
-The Verge. (2026). Gen Z and AI. [https://www.theverge.com/ai-artificial-intelligence/920401/gen-z-ai](https://www.theverge.com/ai-artificial-intelligence/920401/gen-z-ai)
+The Verge. (2026). Gen Z and AI. [https://www.theverge.com/ai-artificial-intelligence/920401/gen-z-ai]
 
 Forbes. (2026). S&P 500's Weight In Mag 7 Stocks Passes 30%. Is This A Diversification Risk?

@@ -18,10 +18,10 @@ Sovereign AI is where a specific country manages the full stack of AI, holding t
 
 The Economist. (2026). Artificial Insecurity.
 
-The Register. (2025). Microsoft exec admits it 'cannot guarantee' data sovereignty. [https://www.theregister.com/2025/07/25/microsoft_admits_it_cannot_guarantee/](https://www.theregister.com/2025/07/25/microsoft_admits_it_cannot_guarantee/)
+The Register. (2025). Microsoft exec admits it 'cannot guarantee' data sovereignty. [https://www.theregister.com/2025/07/25/microsoft_admits_it_cannot_guarantee/]
 
-Center for a New American Security. (2026). _Sovereign AI Index_. [https://interactives.cnas.org/reports/sovereign-ai-index/](https://interactives.cnas.org/reports/sovereign-ai-index/)
+Center for a New American Security. (2026). _Sovereign AI Index_. [https://interactives.cnas.org/reports/sovereign-ai-index/]
 
-Futurism. (2023). Clueless Congressman Bewildered That TikTok Connects Using WiFi. [https://futurism.com/congressman-tiktok-connects-wifi](https://futurism.com/congressman-tiktok-connects-wifi)
+Futurism. (2023). Clueless Congressman Bewildered That TikTok Connects Using WiFi. [https://futurism.com/congressman-tiktok-connects-wifi]
 
-McKinsey. (2026). What is sovereign AI? [https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-sovereign-ai](https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-sovereign-ai)
+McKinsey. (2026). What is sovereign AI? [https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-sovereign-ai]
