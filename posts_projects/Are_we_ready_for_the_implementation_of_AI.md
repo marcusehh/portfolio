@@ -6,10 +6,11 @@ The Mag-7 overlaid on the broader S&P 500 index is eerily beginning to look like
 
 While the gains of AI, in a similar manner to the internet, are objectively massive and sure to structurally alter the workforce, that doesn't mean it will do this in the short term. This reflects Amara's Law, "We tend to overestimate the effect of a technology in the short run and underestimate the effect in the long run." Frankly, we may not be ready for the impacts of AI. I recently attended London Tech Week 2026, an event where it was incredibly difficult to have a conversation not about AI. There is no argument that there is a huge amount of hype around the technology. However, upon talking with a software developer who called himself an AI Consultant, he shared that all of his clients - small businesses - told him they wanted to use AI to completely overhaul their workflows. After a process of research and planning, the only application of AI that the majority found was a chatbot for their company website. This is one example suggesting a broader theme, everyone knows AI is revolutionary, but very few know what they want it to revolutionise.
 
-There is no question that AI has and will continue to change the world. It may take far longer than some think for the benefits to truly materialise and until then it would be wise to expect a correction of the market as AI companies continue to look more and more overvalued.
+There is no question that AI has and will continue to change the world. However, it may take far longer than some think for the benefits to truly materialise and until then, it would be wise to expect a correction of the market as AI companies continue to look more and more overvalued.
 
 **List of References:**
-The Economist. (2026). Elon Musk on AI: humans will no longer be in control in ten years.
+
+The Economist. (2026). Should you be afraid of Elon Musk?
 
 London School of Economics. (2025). _AI and the Generational Divide at Work._
 
