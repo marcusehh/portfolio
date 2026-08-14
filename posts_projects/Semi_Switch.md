@@ -1,4 +1,4 @@
-In Jean-Paul Rodrigue's model of an asset bubble there are four phases. (Rodrigue, 2024) The first is the stealth phase where smart money enters with high returns and little public attention. Then as institutional money flows in, media coverage begins and the awareness phase starts. In the case of AI, this is when hedge funds like the highly leveraged Situational Awareness fund made its 439% return. (Forbes, 2026a) Then in the mania phase institutional investors begin to sell and retail volume surges. These retail investors pile in based on price momentum and FOMO rather than fundamental analysis. Finally, the market busts due to a catalyst triggering a selloff.
+In Jean-Paul Rodrigue's model of an asset bubble there are four phases. The first is the stealth phase where smart money enters with high returns and little public attention. Then as institutional money flows in, media coverage begins and the awareness phase starts. In the case of AI, this is when hedge funds like the highly leveraged Situational Awareness fund made its 439% return. (Forbes, 2026a) Then in the mania phase institutional investors begin to sell and retail volume surges. These retail investors pile in based on price momentum and FOMO rather than fundamental analysis. Finally, the market busts due to a catalyst triggering a selloff.
 
 The stage we are in right now in the semiconductor trade is mania. With that comes the inflow of retail investing and the outflow of institutional investing. In July, we saw the outflow of Situational Awareness which suffered a sharp July selloff, faced margin calls and sold a large portion of its public equity portfolio to Citadel. (Forbes, 2026a) On the other hand, retail investors put $12B into US Semiconductor ETFs in June 2026, ten times as much as June 2025. (Bloomberg Finance L.P., 2026) With the Philadelphia Semiconductor Index falling by roughly 25% from its late-June peak, the question is whether this is just a stage in the mania phase or an omen for the bust.
 
@@ -12,9 +12,6 @@ Bill Capuzzi for the Forbes Financial Council argues that compared to five years
 This means more concentrated volatility, not less.
 
 **List of References:**
-
-Rodrigue, J-P. (2024). Stages in a Bubble. _The Geography of Transport Systems_, 6th Edition. [https://transportgeography.org/contents/chapter3/transportation-and-economic-development/bubble-stages/](https://transportgeography.org/contents/chapter3/transportation-and-economic-development/bubble-stages/)
-
 Forbes. (2025). 6 Minutes Of Retail Trader Research Drives 20% Of Stock Market Volume. [https://www.forbes.com/sites/boazsobrado/2025/05/30/6-minutes-of-retail-trader-research-drives-20-of-stock-market-volume/](https://www.forbes.com/sites/boazsobrado/2025/05/30/6-minutes-of-retail-trader-research-drives-20-of-stock-market-volume/)
 
 Forbes. (2026a). AI Stocks Face A New Risk As Hedge Fund Leverage Unwinds. [https://www.forbes.com/sites/jimosman/2026/07/30/ai-stocks-face-a-new-risk-as-hedge-fund-leverage-unwinds/](https://www.forbes.com/sites/jimosman/2026/07/30/ai-stocks-face-a-new-risk-as-hedge-fund-leverage-unwinds/)
