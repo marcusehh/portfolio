@@ -10,10 +10,10 @@ In the last few weeks, we can see the risks of a market concentrated by retail i
 Retail investing now accounts for ~20% of US stock market volume and NYU Stern research states that the median retail investor spends just six minutes researching a stock before trading. (Forbes, 2025) However, this idea that retail investors are impulsive may be outdated.
 
 Bill Capuzzi for the Forbes Financial Council argues that compared to five years ago, retail investing is less emotional and less driven by social media. (Forbes, 2026d) This shift reflects the emergence of zero-commission trading which allows continuous as opposed to episodic participation. Theoretically, this should make investors more structured and data-driven in their stock picking. However, does this not just result in the same problem? With the rise of AI in stock picking and shared public information, investors' behaviour becomes more correlated. (Forbes, 2026d)
-
 This means more concentrated volatility, not less.
 
 **List of References:**
+
 Forbes. (2025). 6 Minutes Of Retail Trader Research Drives 20% Of Stock Market Volume. [https://www.forbes.com/sites/boazsobrado/2025/05/30/6-minutes-of-retail-trader-research-drives-20-of-stock-market-volume/]
 
 Bloomberg Finance L.P. (2026). Flows for All US Semiconductor ETFs Listed on Bloomberg. November 2024 through 5th August 2026. Via Bravos Research.
