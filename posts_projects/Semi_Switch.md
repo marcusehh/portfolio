@@ -14,21 +14,18 @@ Bill Capuzzi for the Forbes Financial Council argues that compared to five years
 This means more concentrated volatility, not less.
 
 **List of References:**
-
-Rodrigue, J-P. (2024). Stages in a Bubble. _The Geography of Transport Systems_, 6th Edition. [https://transportgeography.org/contents/chapter3/transportation-and-economic-development/bubble-stages/](https://transportgeography.org/contents/chapter3/transportation-and-economic-development/bubble-stages/)
-
-Forbes. (2025). 6 Minutes Of Retail Trader Research Drives 20% Of Stock Market Volume. [https://www.forbes.com/sites/boazsobrado/2025/05/30/6-minutes-of-retail-trader-research-drives-20-of-stock-market-volume/](https://www.forbes.com/sites/boazsobrado/2025/05/30/6-minutes-of-retail-trader-research-drives-20-of-stock-market-volume/)
+Forbes. (2025). 6 Minutes Of Retail Trader Research Drives 20% Of Stock Market Volume. [https://www.forbes.com/sites/boazsobrado/2025/05/30/6-minutes-of-retail-trader-research-drives-20-of-stock-market-volume/]
 
 Bloomberg Finance L.P. (2026). Flows for All US Semiconductor ETFs Listed on Bloomberg. November 2024 through 5th August 2026. Via Bravos Research.
 
-Forbes. (2026a). AI Stocks Face A New Risk As Hedge Fund Leverage Unwinds. [https://www.forbes.com/sites/jimosman/2026/07/30/ai-stocks-face-a-new-risk-as-hedge-fund-leverage-unwinds/](https://www.forbes.com/sites/jimosman/2026/07/30/ai-stocks-face-a-new-risk-as-hedge-fund-leverage-unwinds/)
+Forbes. (2026a). AI Stocks Face A New Risk As Hedge Fund Leverage Unwinds. [https://www.forbes.com/sites/jimosman/2026/07/30/ai-stocks-face-a-new-risk-as-hedge-fund-leverage-unwinds/]
 
-Forbes. (2026b). Asian Chip Stocks Drop As SK Hynix Earnings Disappoint. [https://www.forbes.com/sites/siladityaray/2026/07/29/asian-chip-stocks-drop-as-sk-hynix-earnings-disappoint/](https://www.forbes.com/sites/siladityaray/2026/07/29/asian-chip-stocks-drop-as-sk-hynix-earnings-disappoint/)
+Forbes. (2026b). Asian Chip Stocks Drop As SK Hynix Earnings Disappoint. [https://www.forbes.com/sites/siladityaray/2026/07/29/asian-chip-stocks-drop-as-sk-hynix-earnings-disappoint/]
 
-Forbes. (2026c). Is Fed's Warsh Wrong About AI? South Korea May Provide Answer. [https://www.forbes.com/sites/williampesek/2026/07/18/is-feds-warsh-wrong-about-ai-south-korea-may-provide-answer/](https://www.forbes.com/sites/williampesek/2026/07/18/is-feds-warsh-wrong-about-ai-south-korea-may-provide-answer/)
+Forbes. (2026c). Is Fed's Warsh Wrong About AI? South Korea May Provide Answer. [https://www.forbes.com/sites/williampesek/2026/07/18/is-feds-warsh-wrong-about-ai-south-korea-may-provide-answer/]
 
-Forbes. (2026d). The 'Dumb Money' Myth Is Collapsing, But Market Infrastructure Hasn't Caught Up. [https://www.forbes.com/councils/forbesfinancecouncil/2026/06/02/the-dumb-money-myth-is-collapsing-but-market-infrastructure-hasnt-caught-up/](https://www.forbes.com/councils/forbesfinancecouncil/2026/06/02/the-dumb-money-myth-is-collapsing-but-market-infrastructure-hasnt-caught-up/)
+Forbes. (2026d). The 'Dumb Money' Myth Is Collapsing, But Market Infrastructure Hasn't Caught Up. [https://www.forbes.com/councils/forbesfinancecouncil/2026/06/02/the-dumb-money-myth-is-collapsing-but-market-infrastructure-hasnt-caught-up/]
 
-BBC. (2026). 'I lost $14,000 in a month': Investors hit by Korean stock market's wild swings. [https://www.bbc.com/news/articles/c2k7zj4knwlo](https://www.bbc.com/news/articles/c2k7zj4knwlo)
+BBC. (2026). 'I lost $14,000 in a month': Investors hit by Korean stock market's wild swings. [https://www.bbc.com/news/articles/c2k7zj4knwlo]
 
 Seoul Economic Daily. (2026). Trading Volume Shrinks, Retail Firepower Dries Up as KOSPI Corrects. 13 July 2026.
