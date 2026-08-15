@@ -35,6 +35,13 @@ export const POSTS: Post[] = [
     kind: 'markdown',
     markdown: '/posts_projects/Sov_AI.md',
   },
+  {
+      title: 'The Semiconductor Switch of Hands',
+      date: '2026-08',
+      desc: 'An article that discusses markets becoming concentrated with retail investing.',
+      kind: 'markdown',
+      markdown: '/posts_projects/Semi_Switch.md',
+    },
 ]
 
 POSTS.sort((a, b) => b.date.localeCompare(a.date))
