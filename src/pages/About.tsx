@@ -6,6 +6,10 @@ function BookCard({ book }: { book: Book }) {
   const [cover, setCover] = useState<string | null>(null)
 
   useEffect(() => {
+    if (book.coverId) {
+      setCover(`https://covers.openlibrary.org/b/id/${book.coverId}-L.jpg`)
+      return
+    }
     const query = encodeURIComponent(`${book.title} ${book.author}`)
     fetch(`https://openlibrary.org/search.json?q=${query}&limit=1&fields=cover_i`)
       .then((r) => r.json())
@@ -14,7 +18,7 @@ function BookCard({ book }: { book: Book }) {
         if (id) setCover(`https://covers.openlibrary.org/b/id/${id}-L.jpg`)
       })
       .catch(() => {})
-  }, [book.title, book.author])
+  }, [book.title, book.author, book.coverId])
 
   return (
     <div className="book-card">

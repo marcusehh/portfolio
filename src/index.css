@@ -30,6 +30,7 @@ html, body {
   font-size: 18px;
   height: 100%;
   overflow: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -198,6 +199,7 @@ a:hover {
   flex: 0 0 100%;
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .content {
@@ -230,7 +232,8 @@ a:hover {
   justify-content: space-between;
   gap: 16px;
   border: 1px solid var(--text);
-  border-radius: var(--radius);
+  border-radius: 0;
+
   padding: 16px 20px;
   margin-top: 12px;
   background: transparent;
@@ -378,6 +381,8 @@ button.tag {
 .post__markdown {
   line-height: 1.8;
   color: var(--text);
+  overflow-x: hidden;
+  word-break: break-word;
 }
 
 .post__markdown h1 {
@@ -526,6 +531,7 @@ button.tag {
 
   .app {
     grid-template-columns: 1fr;
+    overflow-x: hidden;
   }
 
   .main {

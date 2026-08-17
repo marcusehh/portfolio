@@ -36,12 +36,24 @@ export const POSTS: Post[] = [
     markdown: '/posts_projects/Sov_AI.md',
   },
   {
-      title: 'The Semiconductor Switch of Hands',
+      title: 'Nvidia, the lender of last resort.',
       date: '2026-08',
-      desc: 'An article that discusses markets becoming concentrated with retail investing.',
+      desc: 'An article primarily written by Oliver Kemp on GPU backed lending. -I wrote the final paragraph.',
       kind: 'markdown',
-      markdown: '/posts_projects/Semi_Switch.md',
+      markdown: '/posts_projects/nvidia_the_lender.md',
     },
+  {
+    title: 'The Semiconductor Switch of Hands',
+    date: '2026-08',
+    desc: 'An article that discusses markets becoming concentrated with retail investing.',
+    kind: 'markdown',
+    markdown: '/posts_projects/Semi_Switch.md',
+  },
 ]
 
-POSTS.sort((a, b) => b.date.localeCompare(a.date))
+const _original = [...POSTS]
+POSTS.sort((a, b) => {
+  const dateDiff = b.date.localeCompare(a.date)
+  if (dateDiff !== 0) return dateDiff
+  return _original.indexOf(b) - _original.indexOf(a)
+})

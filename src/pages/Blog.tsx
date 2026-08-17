@@ -12,7 +12,10 @@ function parseMarkdown(raw: string): string {
     .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/_(.+?)_/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code>$1</code>')
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>')
+    .replace(/\[(https?:\/\/[^\]]+)\]/g, '<a href="$1" target="_blank" rel="noreferrer">$1</a>')
     .replace(/^---$/gm, '<hr />')
     .replace(/\n{2,}/g, '</p><p>')
     .replace(/\n/g, '<br />')}</p>`
