@@ -83,7 +83,22 @@ export default function About() {
   return (
     <section className="page__section about__intro">
       <div className="about__text">
-        <h2>Marcus EJ Hawkins</h2>
+        <div className="about__header">
+          <h2>Marcus EJ Hawkins</h2>
+          <div className="about__links">
+            {CONTACT_LINKS.map((link) => (
+              <a
+                key={link.url}
+                className="tag"
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
         <p>
           I am an incoming undergraduate at <b>University College London (UCL)</b>{' '}
           and I will be studying <b>BSc Social Sciences & Data Science</b>.
@@ -108,20 +123,6 @@ export default function About() {
             </div>
           </li>
         </ul>
-
-        <div className="about__links">
-          {CONTACT_LINKS.map((link) => (
-            <a
-              key={link.url}
-              className="tag"
-              href={link.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
       </div>
     </section>
   )

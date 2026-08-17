@@ -7,8 +7,9 @@ export default function Home() {
 
   return (
     <>
-      <p>Use the sidebar to view different things within the website.</p>
-      <h4>Recent Activity:</h4>
+        <p>This website is a hub for articles I have written (my blog) and projects I am working on.</p>
+        <p>Use the sidebar to view different things within the website.</p>
+      <h4>Recent Article:</h4>
       {latest && (
         <button
           type="button"

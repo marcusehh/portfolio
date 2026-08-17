@@ -38,7 +38,7 @@ export const POSTS: Post[] = [
   {
       title: 'Nvidia, the lender of last resort.',
       date: '2026-08',
-      desc: 'An article primarily written by Oliver Kemp on GPU backed lending. -I wrote the final paragraph.',
+      desc: 'An article primarily written by Oliver Kemp on GPU backed lending. (I wrote the final paragraph)',
       kind: 'markdown',
       markdown: '/posts_projects/nvidia_the_lender.md',
     },

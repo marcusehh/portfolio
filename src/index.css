@@ -268,11 +268,18 @@ a:hover {
   flex-wrap: wrap;
 }
 
+.about__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
 .about__links {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 24px;
 }
 
 .about__text {
@@ -347,8 +354,8 @@ a:hover {
 
 .tag {
   display: inline-block;
-  background: var(--tag-bg);
-  color: var(--tag-text);
+  background: var(--text);
+  color: var(--tag-bg);
   border-radius: 999px;
   padding: 3px 10px;
   font-size: 0.75rem;
@@ -361,7 +368,7 @@ a:hover {
 a.tag:hover,
 button.tag:hover {
   background: var(--bg-subtle);
-  color: var(--accent);
+  color: var(--text);
 }
 
 button.tag {
@@ -523,6 +530,12 @@ button.tag {
 @media (max-width: 600px) {
   .contact-menu {
     display: none;
+  }
+
+  .about__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
   .content {

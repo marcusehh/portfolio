@@ -23,8 +23,8 @@ const EASE = 'cubic-bezier(.4,0,.2,1)'
 type AnimState = 'idle' | 'returning' | 'cycling' | 'flying'
 type FlyBtn = { label: string; position: 'docked' | 'header' } | null
 
-const TYPE_MS = 15
-const ERASE_MS = 5
+const TYPE_MS = 30
+const ERASE_MS = 10
 
 function ContactMenu() {
   const [expanded, setExpanded] = useState(false)
