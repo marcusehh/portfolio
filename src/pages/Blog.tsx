@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useAppContext } from '../AppContext'
-import { POSTS } from '../data/posts'
+import { POSTS } from '../data/blog'
 
-const TYPE_MS = 15
-const ERASE_MS = 5
+const TYPE_MS = 7
 
 function parseMarkdown(raw: string): string {
   return `<p>${raw
@@ -38,28 +37,24 @@ function MarkdownPost({ url }: { url: string }) {
   return <div className="post__markdown" dangerouslySetInnerHTML={{ __html: html }} />
 }
 
-export default function Posts() {
-  const { openPost, setOpenPost, performanceMode } = useAppContext()
+export default function Blog() {
+  const { openPost, setOpenPost } = useAppContext()
   const [hovered, setHovered] = useState<number | null>(null)
   const [displayed, setDisplayed] = useState<number | null>(null)
   const [charCount, setCharCount] = useState(0)
 
   useEffect(() => {
-    if (performanceMode) return
-    const desc = displayed !== null ? POSTS[displayed].desc : undefined
-    if (displayed === hovered) {
-      if (desc && charCount < desc.length) {
-        const t = window.setTimeout(() => setCharCount((c) => c + 1), TYPE_MS)
-        return () => clearTimeout(t)
-      }
-    } else {
-      if (charCount > 0) {
-        const t = window.setTimeout(() => setCharCount((c) => c - 1), ERASE_MS)
-        return () => clearTimeout(t)
-      }
+    if (displayed !== hovered) {
+      setCharCount(0)
       setDisplayed(hovered)
+      return
     }
-  }, [hovered, displayed, charCount, performanceMode])
+    const desc = displayed !== null ? POSTS[displayed].desc : undefined
+    if (desc && charCount < desc.length) {
+      const t = window.setTimeout(() => setCharCount((c) => c + 1), TYPE_MS)
+      return () => clearTimeout(t)
+    }
+  }, [hovered, displayed, charCount])
 
   if (openPost !== null) {
     const post = POSTS[openPost]
@@ -77,7 +72,7 @@ export default function Posts() {
 
   return (
     <>
-      <h2 className="page__subtitle">My blog.</h2>
+      <h2 className="page__subtitle">Articles I have written.</h2>
       <ul className="post-list">
         {POSTS.map((post, i) => (
           <li
@@ -88,8 +83,8 @@ export default function Posts() {
           >
             <div className="post-item__content">
               <span className="post-item__title">{post.title}</span>
-              {(performanceMode || (hovered === i && charCount > 0)) && post.desc && (
-                <div className="post-item__desc">{performanceMode ? post.desc : post.desc.slice(0, charCount)}</div>
+              {displayed === i && post.desc && charCount > 0 && (
+                <div className="post-item__desc">{post.desc.slice(0, charCount)}</div>
               )}
             </div>
             <div className="post-item__meta">

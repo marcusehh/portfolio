@@ -1,32 +1,24 @@
 import { useState, useEffect } from 'react'
 import { PROJECTS } from '../data/projects'
-import { useAppContext } from '../AppContext'
-
-const TYPE_MS = 15
-const ERASE_MS = 5
+const TYPE_MS = 7
 
 export default function Projects() {
-  const { performanceMode } = useAppContext()
   const [hovered, setHovered] = useState<number | null>(null)
   const [displayed, setDisplayed] = useState<number | null>(null)
   const [charCount, setCharCount] = useState(0)
 
   useEffect(() => {
-    if (performanceMode) return
-    const desc = displayed !== null ? PROJECTS[displayed].desc : undefined
-    if (displayed === hovered) {
-      if (desc && charCount < desc.length) {
-        const t = window.setTimeout(() => setCharCount((c) => c + 1), TYPE_MS)
-        return () => clearTimeout(t)
-      }
-    } else {
-      if (charCount > 0) {
-        const t = window.setTimeout(() => setCharCount((c) => c - 1), ERASE_MS)
-        return () => clearTimeout(t)
-      }
+    if (displayed !== hovered) {
+      setCharCount(0)
       setDisplayed(hovered)
+      return
     }
-  }, [hovered, displayed, charCount, performanceMode])
+    const desc = displayed !== null ? PROJECTS[displayed].desc : undefined
+    if (desc && charCount < desc.length) {
+      const t = window.setTimeout(() => setCharCount((c) => c + 1), TYPE_MS)
+      return () => clearTimeout(t)
+    }
+  }, [hovered, displayed, charCount])
 
   return (
     <>
@@ -48,8 +40,8 @@ export default function Projects() {
             )}
             <div className="post-item__content">
               <span className="post-item__title">{project.title}</span>
-              {(performanceMode || (hovered === i && charCount > 0)) && project.desc && (
-                <div className="post-item__desc">{performanceMode ? project.desc : project.desc.slice(0, charCount)}</div>
+              {displayed === i && project.desc && charCount > 0 && (
+                <div className="post-item__desc">{project.desc.slice(0, charCount)}</div>
               )}
             </div>
             <div className="post-item__meta">

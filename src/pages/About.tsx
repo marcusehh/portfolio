@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { CONTACT_LINKS } from '../data/contact'
 import { BOOKS, type Book } from '../data/books'
-import { useAppContext } from '../AppContext'
 
 function BookCard({ book }: { book: Book }) {
   const [cover, setCover] = useState<string | null>(null)
@@ -30,15 +29,14 @@ function BookCard({ book }: { book: Book }) {
   )
 }
 
-const TYPE_MS = 15
-const ERASE_MS = 5
+const TYPE_MS = 7
+const ERASE_MS = 2
 const READING_DESC = 'Books I like.'
 
-function useTypewriter(active: boolean, text: string, skip: boolean) {
+function useTypewriter(active: boolean, text: string) {
   const [charCount, setCharCount] = useState(0)
 
   useEffect(() => {
-    if (skip) return
     if (active) {
       if (charCount < text.length) {
         const t = window.setTimeout(() => setCharCount((c) => c + 1), TYPE_MS)
@@ -50,18 +48,16 @@ function useTypewriter(active: boolean, text: string, skip: boolean) {
         return () => clearTimeout(t)
       }
     }
-  }, [active, charCount, text, skip])
+  }, [active, charCount, text])
 
-  if (skip) return active ? text : ''
   return text.slice(0, charCount)
 }
 
 export default function About() {
-  const { performanceMode } = useAppContext()
   const [open, setOpen] = useState(false)
   const [hoveredReading, setHoveredReading] = useState(false)
 
-  const readingDesc = useTypewriter(hoveredReading, READING_DESC, performanceMode)
+  const readingDesc = useTypewriter(hoveredReading, READING_DESC)
 
   if (open) {
     return (
@@ -88,10 +84,6 @@ export default function About() {
           I am an incoming undergraduate at <b>University College London (UCL)</b>{' '}
           and I will be studying <b>BSc Social Sciences & Data Science</b>.
         </p>
-        <p>
-          I am interested in markets and tech and I enjoy game-development,
-          programming and running.
-        </p>
 
         <ul className="post-list about__reading-list">
           <li
@@ -101,8 +93,8 @@ export default function About() {
           >
             <div className="post-item__content">
               <span className="post-item__title">Reading List</span>
-              {(performanceMode || readingDesc) && (
-                <div className="post-item__desc">{performanceMode ? READING_DESC : readingDesc}</div>
+              {readingDesc && (
+                <div className="post-item__desc">{readingDesc}</div>
               )}
             </div>
             <div className="post-item__meta">

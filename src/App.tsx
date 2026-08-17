@@ -3,16 +3,15 @@ import { AppContext, type PageId } from './AppContext'
 import { CONTACT_LINKS } from './data/contact'
 import Home from './pages/Home'
 import About from './pages/About'
-import Posts from './pages/Posts'
+import Blog from './pages/Blog'
 import Projects from './pages/Projects'
-import GlobalCursor from './components/GlobalCursor'
 
-const PAGES: PageId[] = ['home', 'about', 'posts', 'projects']
+const PAGES: PageId[] = ['home', 'about', 'blog', 'projects']
 
 const PAGE_COMPONENTS: Record<PageId, React.ComponentType> = {
   home: Home,
   about: About,
-  posts: Posts,
+  blog: Blog,
   projects: Projects,
 }
 
@@ -24,8 +23,8 @@ const EASE = 'cubic-bezier(.4,0,.2,1)'
 type AnimState = 'idle' | 'returning' | 'cycling' | 'flying'
 type FlyBtn = { label: string; position: 'docked' | 'header' } | null
 
-const TYPE_MS = 30
-const ERASE_MS = 10
+const TYPE_MS = 15
+const ERASE_MS = 5
 
 function ContactMenu() {
   const [expanded, setExpanded] = useState(false)
@@ -115,11 +114,6 @@ export default function App() {
   const [flyBtn, setFlyBtn] = useState<FlyBtn>({ label: 'home', position: 'header' })
   const [openPost, setOpenPost] = useState<number | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [cursorEnabled, setCursorEnabled] = useState(() => window.matchMedia('(hover: hover)').matches)
-
-  useEffect(() => {
-    document.body.classList.toggle('cursor-custom', cursorEnabled)
-  }, [cursorEnabled])
   const timers = useRef<number[]>([])
 
   useEffect(() => () => timers.current.forEach(clearTimeout), [])
@@ -181,9 +175,8 @@ export default function App() {
     : undefined
 
   return (
-    <AppContext.Provider value={{ openPost, setOpenPost, goto, performanceMode: !cursorEnabled }}>
-      {cursorEnabled && window.matchMedia('(hover: hover)').matches && <GlobalCursor circleEnabled={activePage !== 'posts' || openPost === null} />}
-      <div className="app">
+    <AppContext.Provider value={{ openPost, setOpenPost, goto }}>
+<div className="app">
         <aside className="sidebar">
           <div
             className="sidebar__buttons"
@@ -210,7 +203,7 @@ export default function App() {
 
         <main className="main">
           <header className="header">
-            <div className={`header__nav${mobileOpen ? ' header__nav--open' : ''}`}>
+<div className={`header__nav${mobileOpen ? ' header__nav--open' : ''}`}>
               <button
                 type="button"
                 className="header__burger"
@@ -251,22 +244,7 @@ export default function App() {
           <Footer />
         </main>
 
-        <aside className="right-sidebar">
-          <div className="right-sidebar__top">
-            <button
-              type="button"
-              className={`cursor-toggle${!cursorEnabled ? ' cursor-toggle--on' : ''}`}
-              onClick={() => setCursorEnabled((v) => !v)}
-              aria-label="Toggle performance mode"
-              aria-pressed={!cursorEnabled}
-            >
-              <span className="cursor-toggle__thumb" />
-            </button>
-            <span className="cursor-toggle__mode">Performance Mode</span>
-          </div>
-        </aside>
-
-        {flyBtn && (
+{flyBtn && (
           <div
             className="fly-button"
             aria-hidden="true"

@@ -1,5 +1,5 @@
 import { useAppContext } from '../AppContext'
-import { POSTS } from '../data/posts'
+import { POSTS } from '../data/blog'
 
 export default function Home() {
   const { goto } = useAppContext()
@@ -13,7 +13,7 @@ export default function Home() {
         <button
           type="button"
           className="home__recent"
-          onClick={() => goto('posts', { openPost: 0 })}
+          onClick={() => goto('blog', { openPost: 0 })}
         >
           <span className="home__recent-title">{latest.title}</span>
           <span className="home__recent-date">{latest.date}</span>
