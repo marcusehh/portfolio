@@ -100,8 +100,7 @@ export default function About() {
           </div>
         </div>
         <p>
-          I am an incoming undergraduate at <b>University College London (UCL)</b>{' '}
-          and I will be studying <b>BSc Social Sciences & Data Science</b>.
+          I am a first-year undergraduate at <b>University College London (UCL)</b>{' '} studying <b>BSc Social Sciences & Data Science</b>.
         </p>
 
         <ul className="post-list about__reading-list">

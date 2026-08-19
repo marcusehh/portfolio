@@ -428,6 +428,45 @@ button.tag {
   margin-top: 24px;
 }
 
+.project-filter {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  overflow: hidden;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.project-filter__btn {
+  flex: 1;
+  padding: 12px 20px;
+  background: transparent;
+  color: var(--text);
+  border: none;
+  border-right: 1px solid var(--border);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  opacity: 0.5;
+}
+
+.project-filter__btn:last-child {
+  border-right: none;
+}
+
+.project-filter__btn:hover {
+  background: var(--bg-subtle);
+  opacity: 1;
+}
+
+.project-filter__btn--active {
+  background: var(--bg-subtle);
+  opacity: 1;
+}
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

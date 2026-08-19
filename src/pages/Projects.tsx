@@ -2,10 +2,15 @@ import { useState, useEffect } from 'react'
 import { PROJECTS } from '../data/projects'
 const TYPE_MS = 7
 
+type Filter = 'report' | 'program'
+
 export default function Projects() {
+  const [filter, setFilter] = useState<Filter>('report')
   const [hovered, setHovered] = useState<number | null>(null)
   const [displayed, setDisplayed] = useState<number | null>(null)
   const [charCount, setCharCount] = useState(0)
+
+  const filtered = PROJECTS.filter((p) => p.kind === filter)
 
   useEffect(() => {
     if (displayed !== hovered) {
@@ -13,7 +18,7 @@ export default function Projects() {
       setDisplayed(hovered)
       return
     }
-    const desc = displayed !== null ? PROJECTS[displayed].desc : undefined
+    const desc = displayed !== null ? filtered[displayed]?.desc : undefined
     if (desc && charCount < desc.length) {
       const t = window.setTimeout(() => setCharCount((c) => c + 1), TYPE_MS)
       return () => clearTimeout(t)
@@ -23,8 +28,20 @@ export default function Projects() {
   return (
     <>
       <h2 className="page__subtitle">More professional projects.</h2>
+      <div className="project-filter">
+        {(['report', 'program'] as Filter[]).map((f) => (
+          <button
+            key={f}
+            type="button"
+            className={`project-filter__btn${filter === f ? ' project-filter__btn--active' : ''}`}
+            onClick={() => { setFilter(f); setHovered(null); setDisplayed(null); setCharCount(0) }}
+          >
+            {f === 'report' ? 'Reports' : 'Programs'}
+          </button>
+        ))}
+      </div>
       <ul className="post-list">
-        {PROJECTS.map((project, i) => (
+        {filtered.map((project, i) => (
           <li
             key={project.title}
             className="post-item"

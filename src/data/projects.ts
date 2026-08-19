@@ -4,6 +4,7 @@ export interface Project {
   url: string
   desc: string
   image?: string
+  kind: 'report' | 'program'
 }
 
 export const PROJECTS: Project[] = [
@@ -13,6 +14,7 @@ export const PROJECTS: Project[] = [
     url: '/posts_projects/Assessing_An_AI_Market_Bubble.pdf',
     desc: 'Report on a potential AI Market Bubble.',
     image: '/posts_projects/projects_pictures/Assessing_An_AI_Market_Bubble.png',
+    kind: 'report',
   },
   {
     title: 'Auto-DCF',
@@ -20,6 +22,7 @@ export const PROJECTS: Project[] = [
     url: 'https://github.com/marcusehh/Auto-DCF',
     desc: 'Program that auto-calculates WACC & DCF Valuation using numpy, yfinance, pandas, pygame and matplotlib.',
     image: '/posts_projects/projects_pictures/Auto-DCF.png',
+    kind: 'program',
   },
   {
     title: 'Dynamic Pitch-Deck',
@@ -27,6 +30,7 @@ export const PROJECTS: Project[] = [
     url: 'https://github.com/marcusehh/Dynamic_Pitch-Deck',
     desc: 'A more advanced version of the "Auto-DCF program".',
     image: '/posts_projects/projects_pictures/Dynamic_Pitch-Deck.png',
+    kind: 'program',
   },
   {
     title: 'Kingstone Investments Website',
@@ -34,6 +38,7 @@ export const PROJECTS: Project[] = [
     url: 'https://kingstoneinvestments.co.uk/',
     desc: 'The website I have built for the investment fund/club I co-founded.',
     image: '/posts_projects/projects_pictures/KIBanner.png',
+    kind: 'program',
   },
 ]
 
