@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ba585e8a-f2fa-415b-aad2-d0737aaf5450" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Blog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +156,7 @@
       <workItem from="1786996898073" duration="1907000" />
       <workItem from="1787082085468" duration="28000" />
       <workItem from="1787329126780" duration="2195000" />
+      <workItem from="1787332073067" duration="472000" />
     </task>
     <servers />
   </component>

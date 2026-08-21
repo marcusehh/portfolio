@@ -45,6 +45,20 @@ export default function Blog() {
   const [hovered, setHovered] = useState<number | null>(null)
   const [displayed, setDisplayed] = useState<number | null>(null)
   const [charCount, setCharCount] = useState(0)
+  const [readingTimes, setReadingTimes] = useState<Record<number, number>>({})
+
+  useEffect(() => {
+    POSTS.forEach((post, i) => {
+      fetch(post.markdown)
+        .then((r) => r.text())
+        .then((text) => {
+          const words = text.trim().split(/\s+/).length
+          const mins = Math.max(1, Math.round(words / 200))
+          setReadingTimes((prev) => ({ ...prev, [i]: mins }))
+        })
+        .catch(() => {})
+    })
+  }, [])
 
   useEffect(() => {
     if (displayed !== hovered) {
@@ -87,7 +101,10 @@ export default function Blog() {
             <div className="post-item__content">
               <span className="post-item__title">{post.title}</span>
               {displayed === i && post.desc && charCount > 0 && (
-                <div className="post-item__desc">{post.desc.slice(0, charCount)}</div>
+                <div className="post-item__desc">
+                  {post.desc.slice(0, charCount)}
+                  {charCount >= post.desc.length && readingTimes[i] !== undefined && <em>  - {readingTimes[i]} min.</em>}
+                </div>
               )}
             </div>
             <div className="post-item__meta">
