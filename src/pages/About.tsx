@@ -133,17 +133,17 @@ export default function About() {
           <h2>Marcus EJ Hawkins</h2>
           <div className="about__links">{linkNodes}</div>
         </div>
-        {/* Mobile: h2, then portrait + stacked links side by side */}
-        <h2 className="about__name--mobile">Marcus EJ Hawkins</h2>
-        <div className="about__mobile-row">
-          <img className="about__portrait about__portrait--mobile" src="/images/headshot.jpg" alt="Marcus EJ Hawkins" />
-          <div className="about__links about__links--mobile">{linkNodes}</div>
-        </div>
-        <p>
-          I am a first-year undergraduate at <b>University College London (UCL)</b>{' '} studying <b>BSc Social Sciences & Data Science</b>.
-        </p>
-
-        <ul className="post-list about__reading-list">
+        <div className="about__card-row">
+          <div className="about__mobile-row">
+            <img className="about__portrait about__portrait--mobile" src="/images/headshot.jpg" alt="Marcus EJ Hawkins" />
+            <div className="about__links about__links--mobile">{linkNodes}</div>
+          </div>
+          <div className="about__body">
+            <h2 className="about__name--mobile">Marcus EJ Hawkins</h2>
+            <p>
+              I am a first-year undergraduate at <b>University College London (UCL)</b>{' '} studying <b>BSc Social Sciences & Data Science</b>.
+            </p>
+            <ul className="post-list about__reading-list">
           <li
             className="post-item"
             onMouseEnter={() => setHoveredReading(true)}
@@ -161,7 +161,9 @@ export default function About() {
               </button>
             </div>
           </li>
-        </ul>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   )

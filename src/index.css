@@ -277,10 +277,42 @@ a:hover {
 }
 
 .about__name--mobile {
-  display: none;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.about__card-row {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.about__body {
+  flex: 1;
+  min-width: 0;
 }
 
 .about__mobile-row {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: #919090;
+}
+
+.about__links--mobile {
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.about__portrait--desktop,
+.about__header--desktop {
   display: none;
 }
 
@@ -574,22 +606,13 @@ button.tag {
     display: none;
   }
 
-  .about__portrait--desktop,
-  .about__header--desktop {
-    display: none;
-  }
-
   .about__name--mobile {
     display: block;
     margin-bottom: 12px;
   }
 
-  .about__mobile-row {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    align-items: flex-start;
-    margin-bottom: 16px;
+  .about__card-row {
+    flex-direction: column;
   }
 
   .about__portrait--mobile {
@@ -602,11 +625,6 @@ button.tag {
     filter: grayscale(100%);
   }
 
-  .about__links--mobile {
-    flex-direction: column;
-    gap: 12px;
-    padding-top: 4px;
-  }
 
   .content {
     text-align: left;
