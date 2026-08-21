@@ -529,15 +529,16 @@ button.tag {
   align-items: center;
   gap: 8px;
   height: 100%;
-  border: 1px solid var(--text);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 12px;
+  background: #919090;
   transition: background 0.2s ease;
   cursor: default;
 }
 
 .book-card:hover {
-  background: var(--bg-subtle);
+  background: #a8a8a8;
 }
 
 .book-card__cover-wrap {
