@@ -49,6 +49,13 @@ export const POSTS: Post[] = [
     kind: 'markdown',
     markdown: '/posts_projects/Semi_Switch.md',
   },
+  {
+    title: 'The looming Debt-Doom-Loop.',
+    date: '2026-08',
+    desc: 'An article that assesses the cause and effects of a debt-doom-loop today.',
+    kind: 'markdown',
+    markdown: '/posts_projects/Debt_Doom_Loop.md',
+  },
 ]
 
 const _original = [...POSTS]
