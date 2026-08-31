@@ -36,6 +36,10 @@ function BookCard({ book }: { book: Book }) {
   const [cover, setCover] = useState<string | null>(null)
 
   useEffect(() => {
+    if (book.coverImage) {
+      setCover(book.coverImage)
+      return
+    }
     if (book.coverId) {
       setCover(`https://covers.openlibrary.org/b/id/${book.coverId}-L.jpg`)
       return
@@ -48,7 +52,7 @@ function BookCard({ book }: { book: Book }) {
         if (id) setCover(`https://covers.openlibrary.org/b/id/${id}-L.jpg`)
       })
       .catch(() => {})
-  }, [book.title, book.author, book.coverId])
+  }, [book.title, book.author, book.coverId, book.coverImage])
 
   return (
     <div className="book-card">
