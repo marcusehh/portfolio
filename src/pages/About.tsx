@@ -151,14 +151,15 @@ export default function About() {
           <div className="about__body">
             <h2 className="about__name--mobile">Marcus EJ Hawkins</h2>
             <p>
-              I am a first-year undergraduate at <b>University College London (UCL)</b>{' '} studying <b>BSc Social Sciences & Data Science</b>.
+              I am a first-year undergraduate at <a href="https://www.ucl.ac.uk/" target="_blank" rel="noreferrer" style={{textDecoration:'underline'}}>University College London (UCL)</a>{' '} studying <b>Social Data Science</b>.
             </p>
             <p>
-              Interested in tech, markets, economic history, amongst other things. I write about these topics in-depth in my <a style={{cursor:'pointer', textDecoration:'underline'}} onClick={() => goto('blog')}>blog</a>.
+              Interested in tech, markets and economic history, amongst other things. I write about these topics in-depth in my <a style={{cursor:'pointer', textDecoration:'underline'}} onClick={() => goto('blog')}>blog</a>.
             </p>
             <p>
               <b>More about me:</b> <br/> Studied Maths, Econ & CS at A level, I am also the CTO of <a href="https://kingstoneinvestments.co.uk" target="_blank" rel="noreferrer" style={{textDecoration:'underline'}}>Kingstone Investments</a>, a student investment fund that I founded with a few others.
             </p>
+            <p>I am also working on a game.</p>
             <ul className="post-list about__reading-list">
           <li
             className="post-item"
