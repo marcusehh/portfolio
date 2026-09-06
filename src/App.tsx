@@ -83,10 +83,12 @@ function ContactMenu() {
 
 function Footer() {
   return (
-    <footer className="footer">
-      <ContactMenu />
-      <div className="footer__col footer__copy">
-        <span>© {new Date().getFullYear()} Marcus EJ Hawkins</span>
+    <footer className="footer-wrapper">
+      <div className="footer">
+        <ContactMenu />
+        <div className="footer__col footer__copy">
+          <span>© {new Date().getFullYear()} Marcus EJ Hawkins</span>
+        </div>
       </div>
     </footer>
   )
@@ -113,6 +115,7 @@ export default function App() {
   const [animState, setAnimState] = useState<AnimState>('idle')
   const [flyBtn, setFlyBtn] = useState<FlyBtn>({ label: 'home', position: 'header' })
   const [openPost, setOpenPost] = useState<number | null>(null)
+  const [scrollTo, setScrollTo] = useState<string | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const timers = useRef<number[]>([])
 
@@ -157,8 +160,9 @@ export default function App() {
   )
 
   const goto = useCallback(
-    (page: PageId, opts?: { openPost?: number }) => {
+    (page: PageId, opts?: { openPost?: number; scrollTo?: string }) => {
       if (opts?.openPost !== undefined) setOpenPost(opts.openPost)
+      setScrollTo(opts?.scrollTo ?? null)
       navigate(page)
     },
     [navigate]
@@ -175,7 +179,7 @@ export default function App() {
     : undefined
 
   return (
-    <AppContext.Provider value={{ openPost, setOpenPost, goto }}>
+    <AppContext.Provider value={{ openPost, setOpenPost, scrollTo, goto }}>
 <div className="app">
         <aside className="sidebar">
           <div
